@@ -54,3 +54,12 @@ $ cat input.json | jq . | python3 time-handler.py | head -8
 "start": 2023.10.09_16.26.42.696503,
 "end": 2023.10.09_16.26.45.096412,
 ```
+
+# Add zeros
+
+```
+$ . zero-add.sh 16968688026
+1696868802600000000
+$ . zero-add.sh 16968688026 | go run time-handler.go 
+2023.10.09_19.26.42.600000
+```
